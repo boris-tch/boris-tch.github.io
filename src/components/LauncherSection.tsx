@@ -32,7 +32,7 @@ const LauncherSection = () => {
   return (
     <div 
       ref={sectionRef}
-      className={`gaming-card p-6 md:p-8 transition-all duration-700 ${
+      className={`gaming-card p-6 md:p-8 h-full transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
@@ -41,7 +41,7 @@ const LauncherSection = () => {
       </h2>
       
       <div className="flex flex-col items-center">
-        <div className="w-4/5 max-w-2xl relative overflow-hidden rounded-lg mb-8 group">
+        <div className="w-full max-w-md relative overflow-hidden rounded-lg mb-8 group">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <img 
             src="https://placehold.co/800x450/191919/EEEEEE?text=BMT+Launcher" 
@@ -50,7 +50,7 @@ const LauncherSection = () => {
           />
         </div>
         
-        <div className="text-center max-w-2xl">
+        <div className="text-center">
           <p className="text-gray-300 mb-6 leading-relaxed">
             This is a Launcher that has access to my games (Only Unhinged currently), 
             with the ability for them to be updated when I release them. It uses .NET XML, 

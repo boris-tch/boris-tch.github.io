@@ -33,7 +33,7 @@ const YoutubeSection = () => {
   return (
     <div 
       ref={sectionRef}
-      className={`gaming-card p-6 md:p-8 transition-all duration-700 ${
+      className={`gaming-card p-6 md:p-8 h-full transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
       style={{ transitionDelay: '0.2s' }}
@@ -43,7 +43,7 @@ const YoutubeSection = () => {
       </h2>
       
       <div className="flex flex-col items-center">
-        <div className="w-32 h-32 rounded-full overflow-hidden mb-4 bg-gray-800 border-2 border-gray-700 shadow-xl">
+        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 bg-gray-800 border-2 border-gray-700 shadow-xl">
           <img 
             src="https://placehold.co/160x160/191919/EEEEEE?text=BMT" 
             alt="BMT YouTube Channel" 

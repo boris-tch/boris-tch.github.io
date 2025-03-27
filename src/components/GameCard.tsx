@@ -53,7 +53,7 @@ const GameCard = ({ title, embedUrl, width = 550, height = 165, delay = 0 }: Gam
         width="100%" 
         height={height}
         className="rounded-lg shadow-md border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
-        style={{ maxWidth: width }}
+        style={{ maxWidth: '100%' }}
         title={title}
         frameBorder="0"
       ></iframe>

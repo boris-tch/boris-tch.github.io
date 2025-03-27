@@ -48,3 +48,43 @@
     }
   }
 }
+
+/* Gaming card styles */
+.gaming-card {
+  @apply bg-gaming-card-bg rounded-xl shadow-lg border border-gray-800;
+}
+
+/* Header link styles */
+.header-link {
+  @apply relative text-gray-300 hover:text-white transition-colors duration-300 inline-flex 
+  items-center text-sm md:text-base font-medium uppercase tracking-wide;
+}
+
+.header-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300;
+}
+
+.header-link:hover::after {
+  @apply w-full;
+}
+
+/* Download button style */
+.download-button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-6 py-2 shadow-lg 
+  hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* Button hover effects */
+.button-hover-effect {
+  @apply relative inline-block;
+}
+
+.button-hover-effect::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-white/50 transition-all duration-300;
+}
+
+.button-hover-effect:hover::after {
+  @apply w-full;
+}
