@@ -21,7 +21,7 @@ const Index = () => {
           Welcome to <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">BMT Gaming Hub</span>
         </h1>
         
-        <section className="page-section" style={{ '--animation-delay': '3' } as React.CSSProperties}>
+        <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">RECENT GAMES</h2>
           
           <div className="space-y-6">
@@ -43,11 +43,11 @@ const Index = () => {
           </div>
         </section>
         
-        <section className="page-section mt-12" style={{ '--animation-delay': '5' } as React.CSSProperties}>
+        <section className="mb-16">
           <LauncherSection />
         </section>
         
-        <section className="page-section mt-12" style={{ '--animation-delay': '7' } as React.CSSProperties}>
+        <section className="mb-16">
           <YoutubeSection />
         </section>
       </main>

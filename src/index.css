@@ -1,133 +1,50 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-
-    --card: 0 0% 9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 0 0% 9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 215 25% 27%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 0 0% 35%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-
-    --accent: 215 25% 27%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-
-    --radius: 0.75rem;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 217.2 91.2% 59.8%;
+    --radius: 0.5rem;
   }
+}
 
-  * {
-    @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
-  
+@layer base {
   body {
-    @apply bg-gaming-dark text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-@layer components {
-  .gaming-card {
-    @apply bg-gaming-card-bg rounded-xl border border-gray-800 shadow-lg transition-all duration-300 overflow-hidden;
+    @apply bg-gaming-darker text-white font-sans antialiased;
   }
   
-  .gaming-card:hover {
-    @apply shadow-xl border-blue-500/40 transform-gpu scale-[1.01];
-  }
-  
-  .button-hover-effect {
-    @apply relative overflow-hidden transition-all duration-300;
-  }
-  
-  .button-hover-effect:after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300;
-  }
-  
-  .button-hover-effect:hover:after {
-    @apply w-full;
-  }
-  
-  .glass-panel {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
-  }
-  
-  .header-link {
-    @apply text-gray-300 hover:text-white transition-colors duration-300 button-hover-effect px-2 py-1 text-sm md:text-base;
-  }
-  
-  .download-button {
-    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
-  }
-
+  /* Custom animation for page sections */
   .page-section {
-    @apply py-12 animate-fade-in opacity-0;
-    animation-delay: calc(var(--animation-delay, 0) * 100ms);
-    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: calc(var(--animation-delay, 0) * 0.1s);
   }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #121212;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3b3b3b;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4b4b4b;
-}
-
-/* Page transitions */
-.page-enter {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 400ms, transform 400ms;
-}
-
-.page-exit {
-  opacity: 1;
-}
-
-.page-exit-active {
-  opacity: 0;
-  transition: opacity 300ms;
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
